@@ -23,6 +23,8 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          npm cache verify
+          npm cache clean --force
           npm install
           npm run build
 
