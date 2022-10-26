@@ -5,10 +5,31 @@
   "repository": "git@github.com:BeehiveCorp/woof-api.git",
   "author": "Almeida154 <davidalmeida154of@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/index.ts",
+    "typeorm": "typeorm-ts-node-esm",
+    "migrate": "yarn typeorm migration:run -d src/data-source.ts",
+    "build": "npx tsc"
+  },
   "dependencies": {
-    "express": "^4.18.2"
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mssql": "^9.0.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.10"
   },
   "devDependencies": {
-    "@types/express": "^4.17.14"
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.5",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "*"
   }
 }
