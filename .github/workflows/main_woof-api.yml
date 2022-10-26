@@ -25,7 +25,7 @@ jobs:
         run: |
           npm cache verify
           npm cache clean --force
-          npm install
+          npm install --force
           npm run build
 
       - name: Upload artifact for deployment job
